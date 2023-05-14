@@ -1,0 +1,338 @@
+@charset "UTF-8";
+    /*******************FONTS****************/
+ @font-face {
+    font-family: 'Quicksand';
+    src: url(./fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+ }
+
+
+    /********Normalize CSS**********/
+ * {
+    border: 0;
+    padding: unset;
+    margin: unset;
+    vertical-align: baseline;
+ }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+img {
+  display: block;
+  border: none;
+}
+
+/* ol, ul {
+  list-style: none;
+} */
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+  /******************Var***********************/
+:root {
+   --text-color: rgb(94, 94, 94);
+   --bg-color: rgb(51, 51, 51);
+   --section-header-color: rgb(110,112,110);
+   --linkHover-color: rgb(182,136,89);
+   --sub-header: rgb(27,27,27);
+   --linkColor: #877267;
+}
+
+
+    /***********************Body*********************/
+body {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: 'Quicksand';
+    font-weight: normal;
+    -webkit-text-size-adjust: 100%;
+    font-size-adjust: 100%;
+    cursor: default;
+}
+
+
+
+    /******************Header*******************/
+.header-container {
+  background: var(--bg-color);
+  color: RGB(169, 169, 169);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.header-title {
+  font-weight: 400;
+  line-height: 28.8px;
+  text-transform: uppercase;
+  font-family: "Quicksand";
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-align: left;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.header-title:hover {
+  cursor: pointer;
+  transition: .3s ease-out;
+}
+
+  /*******************Navigation******************/
+nav ul {
+  list-style: none;
+  justify-self: flex-start;
+  text-transform: uppercase;
+   padding-right: 1rem; 
+}
+nav li.list-item {
+  display: inline;
+  color: RGB(169, 169, 169);
+  font-size: .88rem;
+  padding: 1.13rem;
+  letter-spacing: 2px;
+ 
+}
+li.list-item:hover {
+  color: RGB(205, 187, 179);
+  cursor: pointer;
+  transition: all .3s linear;
+}
+
+
+  /***************Main Content***************/
+.content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 56px;
+}
+span.content-header {
+  font-size: 24px;
+  letter-spacing: 2.184px;
+  line-height: 2.1rem;
+  font-weight: 400;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  margin-top: 30px;
+  line-height: 24px;
+}
+.grid-container h4 {
+  color: var(--sub-header);
+  line-height: 1.4rem;
+  margin-bottom: 24px;
+  font-size: 1.125rem;
+}
+.grid-container p {
+  font-size: 18px;
+  line-height: 27px;
+}
+.grid-container a {
+  color: var(--linkColor) ;
+}
+.grid-container a:hover {
+  color: var(--sub-header);
+  transition: .3s linear;
+}
+
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 300px);
+  gap: 45px;
+  margin: 2rem 0;
+  font-size: 18px;
+}
+.content-header {
+  line-height: 8rem;
+  margin: 4rem 0;
+}
+.grid-container-2 img {
+  width: 37rem;
+  height: 18.5rem;
+}
+.grid-container-2 h4 {
+  color: var(--sub-header);
+  margin-bottom: 24px;
+}
+.grid-container-2 a {
+  color: var(--linkColor);
+}
+.grid-container-2 a:hover {
+  color: var(--sub-header);
+  transition: .3s linear;
+}
+.grid-container-2 .item1 {
+  grid-column: 1/2;
+}
+.grid-container-2 .item2 {
+  grid-column:2/-1;
+  grid-row: 1/2;
+  align-self: center;
+}
+.grid-container-2 .item3 {
+  align-self: center;
+}
+.grid-container-2 .item5 {
+   grid-row: 3;
+}
+.grid-container-2 .item6{
+  align-self: center;
+}
+
+.loc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  margin-top: 4.5rem;
+  margin-bottom: 6rem;
+}
+.useful_links {
+  line-height: 1.688!important;
+}
+.useful_links h4 {
+  color: var(--sub-header);
+  text-align: center;
+  margin: 0 0 24px;
+  font-size: 18px;
+}
+.useful_links ul {
+  margin-bottom: 1.5rem;
+}
+.useful_links li {
+  font-size: 18px;
+  line-height: 1.688rem;
+  font-weight: 400;
+}
+.useful_links li a {
+  color: rgb(135,114,103);
+}
+.useful_links li a:hover {
+  color: var(--sub-header);
+  transition: color .3s linear;
+}
+.useful_links strong {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+}
+.useful_links .more {
+  border: 1px solid var(--linkColor);
+  background: #fff;
+  padding: 0.85rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  font-family: "Quicksand";
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--linkColor);
+  font-size: 16px;
+  font-weight: 700;
+  width: 180px;
+  text-align: center;
+}
+.useful_links .more:hover {
+  background: rgb(182, 160, 149);
+  color: #000;
+  border: 1px solid rgb(182, 160, 149);
+  transition: background .3s ease-in, color .3s linear;
+}
+.useful_links .more::before {
+  content: "";
+  display: block;
+  text-align: center;
+  top: 50%;
+  left: 18px;
+  width: 22px;
+  height: 1px;
+  background: rgb(135,114,103);
+  position: absolute;
+}
+.useful_links .more::after {
+  content: "";
+  display: block;
+  text-align: center;
+  top: 50%;
+  right: 18px;
+  width: 22px;
+  height: 1px;
+  background: rgb(135,114,103);
+  position: absolute;
+}
+.useful_links .more:hover::before {
+  content: '';
+  color: #000;
+}
+
+
+
+
+/********************FOOTER*****************/
+.footer {
+  background: rgb(51, 51, 51);
+  padding: 3.5rem 2rem;
+  padding-bottom: 2rem;
+  
+}
+.footer h4 {
+  text-align: center;
+  letter-spacing: 2.338px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 16px;
+}
+.footer span > p {
+  color: #fff;
+  text-align: center;
+  line-height: 21px;
+  font-size: 14px;
+  margin-bottom: 32px;
+  letter-spacing: 2.338px;
+}
+.sb-footer {
+  color:RGB(169, 169, 169);
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 2.338px;
+}
+.sb-right {
+  text-align: right;
+  line-height: 21px;
+}
+.sb-right a {
+  color: rgb(182,160,149);
+  text-decoration: none;
+}
+.sb-right a:hover {
+  color: rgb(205, 187,179);
+  transition: all .3s linear;
+}
