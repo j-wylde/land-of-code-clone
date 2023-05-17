@@ -86,8 +86,7 @@ body {
   font-size: 1.5rem;
   letter-spacing: 3px;
   text-align: left;
-  padding-left: 1rem;
-  text-align: left;
+  /* padding-left: 16px; */
 }
 
 .header-title:hover {
@@ -115,7 +114,22 @@ li.list-item:hover {
   cursor: pointer;
   transition: all .3s linear;
 }
+@media screen and (min-width: 768px) and (max-width: 860px) { 
+  .header-title {
+    font-size: .95rem;
+  }
 
+
+  nav li.list-item {
+    font-size: .55rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+    span#menu-toggle {
+    display: none;
+  }
+}
 
   /***************Main Content***************/
 .content {
@@ -201,6 +215,9 @@ span.content-header {
   align-self: center;
 }
 
+
+
+/****Links*****/ 
 .loc {
   display: flex;
   align-items: center;
@@ -216,7 +233,7 @@ span.content-header {
   color: var(--sub-header);
   text-align: center;
   margin: 0 0 24px;
-  font-size: 18px;
+  font-size: 18px!important;
 }
 .useful_links ul {
   margin-bottom: 1.5rem;
@@ -335,4 +352,96 @@ span.content-header {
 .sb-right a:hover {
   color: rgb(205, 187,179);
   transition: all .3s linear;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .header-title {
+    font-size: 0.85rem;
+    padding-left: 12px;
+    line-height: 24px;
+    transform: translateX(84px);
+  }
+  .navigation {
+    display: none;
+    position: relative;
+  }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 38px;
+    background:var(--bg-color);
+  }
+  nav li.list-item {
+    display: block;
+    padding: 12px;
+    font-size: 12px;
+  }
+  .content {
+    padding: 12px;
+    margin-top: 45px;
+  }
+  span.content-header {
+    line-height: 1.5rem;
+    font-size: 18px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .grid-container p {
+    font-size: 0.98rem;
+    text-align: left;
+  }
+  .grid-container h4:not(.box1):not(.box2) {
+    margin-top: 12px;
+  }
+  
+  .grid-container-2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+  .item1 {
+    order: 1;
+  }
+  .item2 {
+    order: 2;
+  }
+  .item3 {
+    order: 4;
+  }
+  .item4 {
+    order: 3;
+  }
+  .item5 {
+    order: 5;
+  }
+  .item6 {
+    order: 6;
+  }
+  .grid-container-2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .loc:not(.more){
+    margin-left: 20px;
+    max-width: 90%;
+  }
+  
+  .useful_links li {
+    font-size: 15px;
+  }
+
+  .sb-left {
+    font-size: 0.65rem;
+  }
+  
+  .sb-right {
+    font-size: 0.65rem;
+  }
 }
