@@ -363,22 +363,4 @@ span.content-header {
 
 
 
-/******Media queries*****/
-@media screen and (max-width: 768px) {
-    .menu {
-    display: none;
-  }
 
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu-toggle.active {
-    color: #ff0000;
-  }
-
-  .menu-toggle.active + .menu {
-    display: block;
-  }
-}
-}
